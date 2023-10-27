@@ -12,6 +12,7 @@ Crypto Trading System is a Java Spring Boot application for cryptocurrency tradi
 - [Usage](#usage)
 - [API Endpoints](#api-endpoints)
 - [Configuration](#configuration)
+- [Adding New Users](#adding-new-users)
 
 
 ## Getting Started
@@ -80,5 +81,20 @@ For more details on API usage, refer to the API documentation.
 
 The application can be configured by editing the `application.properties` file. You can specify database settings, server port, and other configuration options there.
 
+## Adding New Users
 
+1. Open the `data.sql` file in the project.
+
+2. Add the following SQL statement to insert a new user into the `Customer` table. Replace `new_user_name`, `new_wallet_balance`, and other values with the desired user details:
+
+   ```sql
+   INSERT INTO Customer (username, wallet_balance) VALUES ('new_user_name', new_wallet_balance);
+For example:
+
+sql
+Copy code
+INSERT INTO Customer (username, wallet_balance) VALUES ('alice', 50000.00000000);
+Save the data.sql file.
+
+When you run the application, the new user will be added to the system with the specified username and wallet balance.
 
